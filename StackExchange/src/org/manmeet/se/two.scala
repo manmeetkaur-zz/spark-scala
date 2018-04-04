@@ -14,7 +14,7 @@ object two {
   def main(args: Array[String]) {
     
     val spark = SparkSession.builder().appName("Question 2").getOrCreate()
-    val data = spark.read.textFile("file:///Users/manmeet/Downloads/Posts.xml").rdd
+    val data = spark.read.textFile("file:///Users/manmeetkaur/Downloads/Posts.xml").rdd
     
     val ques = data
                 .filter(line => (line.trim().startsWith("<row")))
